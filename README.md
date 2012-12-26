@@ -4,7 +4,17 @@ A ClojureScript nodejs script designed to update the tags for a specific source 
 
 ## Usage
 
-USAGE: update-tags <tag-file> <src-file>
+To update the ctags file '<tags-file>' with tags from '<src-file>'
+
+  update-tags <tag-file> <src-file>
+
+Having said that, I can't imagine why you'd want to do that. I plan to use it like this in my .vimrc
+
+  autocmd BufWritePost * execute "silent !update-tags ./.tags % &" | redraw!
+
+...although I've not tried it yet!
+
+
 
 ## License
 
