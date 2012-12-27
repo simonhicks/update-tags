@@ -12846,7 +12846,7 @@ update_tags.core.start = function() {
       e = update_tags.core._STAR_tag_file_STAR_;
       var f = update_tags.core._STAR_src_file_STAR_;
       try {
-        return update_tags.core._STAR_tag_file_STAR_ = a, update_tags.core._STAR_src_file_STAR_ = b, cljs.core.truth_(update_tags.core.fs.exists(update_tags.core._STAR_tag_file_STAR_)) && update_tags.core.remove_old_tags.call(null), update_tags.core.update_tag_file.call(null)
+        return update_tags.core._STAR_tag_file_STAR_ = a, update_tags.core._STAR_src_file_STAR_ = b, cljs.core.truth_(update_tags.core.fs.existsSync(update_tags.core._STAR_tag_file_STAR_)) && update_tags.core.remove_old_tags.call(null), update_tags.core.update_tag_file.call(null)
       }finally {
         update_tags.core._STAR_src_file_STAR_ = f, update_tags.core._STAR_tag_file_STAR_ = e
       }

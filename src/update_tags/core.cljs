@@ -36,7 +36,7 @@
     (if valid-args
       (binding [*tag-file* tag-file
                 *src-file* src-file]
-        (when (.exists fs *tag-file*)
+        (when (.existsSync fs *tag-file*)
           (remove-old-tags))
         (update-tag-file))
       (println "USAGE: update-tags <tag-file> <src-file>"))))
